@@ -1,4 +1,4 @@
-const index = require("../index.js")
+const index = require("../GITEI.js")
 module.exports = {
     run: async (message, usuario, data) => {
         switch (message.body.toLowerCase()) {
