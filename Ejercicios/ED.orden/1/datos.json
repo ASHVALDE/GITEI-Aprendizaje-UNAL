@@ -1,0 +1,6 @@
+{
+    "Enunciado":"❔ Cual es el orden de la siguiente ecuacion diferencial?",
+    "Opciones":["Orden 2","Orden 1","Orden 0","Ninguno"],
+    "OpcionCorrecta":"4",
+    "Explicacion":"Esta no tiene orden ya que no es una ecuacion diferencial"
+}

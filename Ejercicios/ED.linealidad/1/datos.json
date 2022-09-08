@@ -1,0 +1,6 @@
+{
+    "Enunciado":"❔ La siguiente ecuacion es lineal?",
+    "Opciones":["No porque X esta derivado 2 veces","No es una ecuacion diferencial","Si es lineal","No es lineal por el tangente"],
+    "OpcionCorrecta":"4",
+    "Explicacion":"Esta funcion no es lineal porque la variable dependiente es X ( se puede ver en la derivada ) y esta operada por la tangente por lo cual la respuesta es la numero 4"
+}

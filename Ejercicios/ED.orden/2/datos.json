@@ -1,0 +1,6 @@
+{
+    "Enunciado":"❔ Cual es el orden de la siguiente ecuacion diferencial?",
+    "Opciones":["Orden 2","Orden 1","Orden 3","Orden -1"],
+    "OpcionCorrecta":"1",
+    "Explicacion":"La maxima derivada hallada en la funcion es d2y entonces la ecuacion es de orden 2"
+}

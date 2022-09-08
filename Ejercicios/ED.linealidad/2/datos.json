@@ -1,0 +1,6 @@
+{
+    "Enunciado":"❔ La siguiente ecuacion es lineal?",
+    "Opciones":["No porque X esta elevado al cuadrado","No porque x multiplica dY","Si es lineal","No porque X multiplica a Y"],
+    "OpcionCorrecta":"3",
+    "Explicacion":"Si es lineal"
+}

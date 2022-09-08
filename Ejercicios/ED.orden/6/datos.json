@@ -1,0 +1,6 @@
+{
+    "Enunciado":"❔ Cual es el orden de la siguiente ecuacion diferencial?",
+    "Opciones":["Orden 1","Orden -1","Orden 2","No es una ecuacion diferencial"],
+    "OpcionCorrecta":"3",
+    "Explicacion":"La mayor derivada encontrada en la ecuacion es Y'' o y derivada dos veces por lo tanto es de orden 2."
+}

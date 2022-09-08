@@ -1,0 +1,6 @@
+{
+    "Enunciado":"❔ La siguiente ecuacion es lineal?",
+    "Opciones":["No y esta operado con seno","No porque X esta multiplicado a dy","Si es lineal","No porque dy no tiene y"],
+    "OpcionCorrecta":"1",
+    "Explicacion":"Y es la variable dependiente y esta operado con seno entonces no puede ser lineal"
+}

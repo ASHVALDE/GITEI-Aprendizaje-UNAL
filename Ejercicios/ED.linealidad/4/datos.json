@@ -1,0 +1,6 @@
+{
+    "Enunciado":"❔ La siguiente ecuacion es lineal?",
+    "Opciones":["No porque Y esta derivado 2 veces","No porque Y esta elevado al cuadrado","Si es lineal","No es lineal porque Y es negativo"],
+    "OpcionCorrecta":"2",
+    "Explicacion":"Y no puede estar elevado al cuadrado en una lineal"
+}

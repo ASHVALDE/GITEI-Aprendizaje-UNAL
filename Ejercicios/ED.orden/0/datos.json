@@ -1,0 +1,6 @@
+{
+    "Enunciado":"❔ Cual es el orden de la siguiente ecuacion diferencial?",
+    "Opciones":["Grado 2","Grado 1"],
+    "OpcionCorrecta":"2",
+    "Explicacion":"La solucion es de grado 1 ya que la maxima derivada corresponde a Y' que es una derivada de primer orden"
+}

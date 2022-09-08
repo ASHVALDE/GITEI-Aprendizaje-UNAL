@@ -1,0 +1,6 @@
+{
+    "Enunciado":"❔ Porque la siguiente ecuacion no es lineal?",
+    "Opciones":["Porque Y esta derivado 2 veces","Porque hay una Y en la derivada","Porque no esta igualada a 0","La ecuacion no es diferencial"],
+    "OpcionCorrecta":"2",
+    "Explicacion":"La derivada no puede contener la variable dependiente entonces la respuesta correcta es la 2."
+}

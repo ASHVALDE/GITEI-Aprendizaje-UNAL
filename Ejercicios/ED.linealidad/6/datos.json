@@ -1,0 +1,6 @@
+{
+    "Enunciado":"❔ La siguiente ecuacion es lineal?",
+    "Opciones":["No porque U no puede ser derivado","No porque Y esta operando con Seno","Si es lineal","No es lineal porque no hay X"],
+    "OpcionCorrecta":"3",
+    "Explicacion":"Si es lineal"
+}
