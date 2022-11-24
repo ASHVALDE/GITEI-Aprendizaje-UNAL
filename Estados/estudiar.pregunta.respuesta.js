@@ -1,4 +1,4 @@
-const index = require("../GITEI.js")
+const index = require("../app.js")
 function responder(correcto,Explicacion,ID){
     if (correcto){
         index.client.sendMessage(ID,"🟢 Respuesta correcta: +1 Punto en este tema")

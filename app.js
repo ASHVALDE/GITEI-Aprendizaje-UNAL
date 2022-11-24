@@ -9,41 +9,58 @@ var con = mysql.createConnection({
 });
 var Estado = {}
 
+let data = {}
+
+
+
 const client = new Client({
-    authStrategy: new LocalAuth(),
-    puppeteer : {headless: true, args: ['--no-sandbox']}
-  });
+    // authStrategy: new LocalAuth(), // Enable session storage
+    // puppeteer: {
+    //     headless: true,
+    //     args: ['--no-sandbox',
+    //         '--disable-setuid-sandbox']
+    // }
+});
 
 client.on('qr', qr => {
     qrcode.generate(qr, {small: true});
 });
 
 client.on("message", async(message) => {
-    //Obteniendo numero del usuario
+    //Obteniendo informacion del usuario
     const usuario = await message.getContact()
     const numero = usuario.number
+    //Creando sesion si no existe
+    if (!data[usuario]){
+        data[usuario]={
+            ["UltimoMensaje"]: new Date(1999,1)
+            
+        }
+    }
+    //Calculamos hace cuanto no escribe el usuario en minutos
+    const tiempoTranscurrido = (Math.abs(new Date() - data[usuario]["UltimoMensaje"] ))/(1000*60)
+    //Guardamos el nuevo "ultimo tiempo"
+    data[usuario]["UltimoMensaje"]= new Date()
+
     //Se hace una query para ver si esta registrado ( para guardar info y eso )
     con.query("SELECT * FROM ProyectosASH.CuentasGITEI WHERE Numero='"+numero+"'",(a,b)=>{
-        //Primero verificamos si el usuario tiene un estado pendiente
+        console.log(tiempoTranscurrido)
+        if (tiempoTranscurrido >= 1 || message.body.toLowerCase() === "reset"){
+            message.reply("¿Buenos dias qué vamos a estudiar hoy ?")
+            Estado[numero]=["buscartemas"]
+            return true
+        }
+        // Verificamos si el usuario tiene un estado pendiente
         if (Estado[numero]){
             const {run} = require("./Estados/"+Estado[numero][0])
             run(message,usuario,Estado[numero])
             return true
         }
         
-        //
         if (b.length ==0){
-            
-            message.reply("😕 Parece que no estas registrad@, me regalas tu nombre: ")
+            message.reply("😕 Parece que no estas registrad@, me regalas tu nombre:")
             Estado[numero]=["registro.nombre"]
             return true
-        }
-        if (fs.existsSync("./Comandos/"+message.body.toLowerCase()+".js")){
-            const {run} = require("./Comandos/"+message.body.toLowerCase())
-            run(message,usuario,Estado[numero])
-            return true
-        }else{
-            message.reply("😀 Ese no es un comando valido, usa 'ayuda' para ver que puedes hacer.")
         }
     })
 });
@@ -66,6 +83,7 @@ function changeState(data,numero,index){
     else{
         Estado[numero] = data
     }
+    console.log("Estado: " + JSON.stringify(Estado, null, 4))
 }
 function registrar(numero,nombre){
     con.query("INSERT INTO ProyectosASH.CuentasGITEI (Nombre, Numero, Info) VALUES ('"+nombre+"', '"+numero+"', '');")

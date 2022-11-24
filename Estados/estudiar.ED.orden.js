@@ -1,4 +1,4 @@
-const index = require("../GITEI.js")
+const index = require("../app.js")
 const { MessageMedia } = require('whatsapp-web.js');
 const fs = require('fs');
 const { join } = require('path')

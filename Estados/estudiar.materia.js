@@ -1,4 +1,4 @@
-const index = require("../GITEI.js")
+const index = require("../app.js")
 module.exports = {
     run: async (message, usuario, data) => {
         let temas = {
