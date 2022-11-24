@@ -1,4 +1,4 @@
-const index = require("../GITEI.js")
+const index = require("../app.js")
 const {List, Buttons } = require('whatsapp-web.js');
 const comandos = {
     ["🤗 Ayuda"]:"Muestra este menu!",
