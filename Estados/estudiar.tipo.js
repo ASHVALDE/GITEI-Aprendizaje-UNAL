@@ -1,7 +1,7 @@
 const index = require("../app.js")
 const buscartemas = require("./buscartemas.js")
 const temas_dict = buscartemas.temas_dict
-const problema_tags = ["tengo un problema", "problema", "específico", "problema en específico", "problema específico"]
+const problema_tags = ["tengo un problema", "problema","especifico", "específico", "problema en específico", "problema específico"]
 const estudiar_tags = ["general", "quiero estudiar", "me gustaria estudiar"]
 const study_types = { "especifico": problema_tags, "general": estudiar_tags }
 

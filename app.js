@@ -14,12 +14,12 @@ let data = {}
 
 
 const client = new Client({
-    // authStrategy: new LocalAuth(), // Enable session storage
-    // puppeteer: {
-    //     headless: true,
-    //     args: ['--no-sandbox',
-    //         '--disable-setuid-sandbox']
-    // }
+    authStrategy: new LocalAuth(), // Enable session storage
+         puppeteer: {
+         headless: true,
+         args: ['--no-sandbox',
+             '--disable-setuid-sandbox']
+     }
 });
 
 client.on('qr', qr => {
